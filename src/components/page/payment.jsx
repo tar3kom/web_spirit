@@ -14,6 +14,7 @@ export const Playment = () => {
       <p className="P_mail">เบอร์โทรศัพท์</p>
       <input className="input_mail" />
       <img src={product.QR} className="pic_mail" />
+      <input className="button_pay" type="file" />
       <button className="button_pay">APPLY</button>
     </div>
   );

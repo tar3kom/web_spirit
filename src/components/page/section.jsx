@@ -26,12 +26,19 @@ export const Section = () => {
               <p className="text_in_service">{product.description}</p>
               <p className="price_per_piece">{product.price[0]}</p>
               <p className="amount">1</p>
-              <Link to="/payment" state={{ product }}>
-                <p className="payment">ชำระสินค้า</p>
-              </Link>
-              <button className="payment" onClick={() => handleRemove(index)}>
-                X
-              </button>
+              <div className="section_box">
+                <Link to="/payment" state={{ product }}>
+                  <p className="payment">ชำระสินค้า</p>
+                </Link>
+              </div>
+              <div className="section_box">
+                <button
+                  className="remove_button"
+                  onClick={() => handleRemove(index)}
+                >
+                  X
+                </button>
+              </div>
             </div>
           </div>
         ))

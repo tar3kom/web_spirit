@@ -128,16 +128,19 @@
 
 .price_per_piece{
   text-align: center;
-  
-  margin: 4%;
+  max-width: 80px;
+  max-height: 20px;
+  font-size: 14px;
+  margin-top: 4%;
   margin-left: 7%;
+ 
 }
 
 .amount{
   text-align: center;
-  
-  margin: 4%;
-  margin-left: 9%;
+  margin-left: 8%;
+  margin-top: 4%;
+
 }
 
 .sum_price{

@@ -2,8 +2,12 @@ import React from "react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom"; // Import useNavigate
 import { Link, NavLink } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
+import { setShoppingList } from "../../redux/action";
 export const Home = () => {
   const navigate = useNavigate(); // Create a navigate function
+  const shoppingList = useSelector((state) => state.shoppingList);
+  const dispatch = useDispatch();
 
   const products = [
     {
@@ -51,8 +55,19 @@ export const Home = () => {
     },
   ];
   const [currentImage, setCurrentImage] = useState(products[0]);
+  const updateShoppingList = (newList) => {
+    dispatch(setShoppingList(newList));
+    console.log(shoppingList);
+  };
+
+  const handleBuy = (item) => {
+    const newList = [...shoppingList, item];
+    updateShoppingList(newList); // เรียกใช้ฟังก์ชันเพื่ออัปเดต Redux store
+    navigate("/section", { state: { product: newList } });
+  };
 
   // Function to handle random image change
+
   const randomImage = () => {
     const randomIndex = Math.floor(Math.random() * products.length);
     setCurrentImage(products[randomIndex]);
@@ -66,14 +81,15 @@ export const Home = () => {
     <div className="product_container">
       <div className="home_left">
         <div className="button_Home_container1">
-          <Link to="/section" state={{ products: currentImage }}>
-            <button className={"button_pic"}>
-              <img
-                src="/—Pngtree—facebook love icon_3584863.png"
-                className="button_pic"
-              />
-            </button>
-          </Link>
+          <button
+            className={"button_pic"}
+            onClick={() => handleBuy(currentImage)}
+          >
+            <img
+              src="/—Pngtree—facebook love icon_3584863.png"
+              className="button_pic"
+            />
+          </button>
         </div>
         <div className="button_Home_container2">
           <button className="button_pic" onClick={likeImage}>
