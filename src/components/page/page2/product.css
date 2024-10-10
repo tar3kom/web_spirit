@@ -1,0 +1,156 @@
+.size3{
+    max-width: 400px;
+    max-height: 400px;
+    margin: 25px;
+    margin-left: 200px;
+}
+
+.box {
+    display: flex;
+}
+
+
+
+.textbox {
+    background-color: lightgrey;
+    
+  width: 100%;
+  
+  padding: 50px;
+  margin: 20px;
+  font-size: 50px;
+  text-align: center;
+  font-size: 25px;
+  margin-right: 150px;
+}
+
+.textbox2{
+    background-color: lightgrey;
+    max-width: 700px;    
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    
+  
+    padding: 100px;
+    margin: 20px;
+    margin-left: 200px;
+    
+}
+
+.textbox3{
+    background-color: lightgrey;
+    max-width: 700px;    
+    width: 100%;
+    
+    display: flex;
+    flex-direction: column;
+    padding: 100px;
+    margin: 20px;
+    margin-left: 3%;
+    margin-right: 150px;
+    
+}
+
+.buy_sell {
+    color: white;
+    max-width: 250px;    
+    width: 100%;
+    border: 5px solid rgba(233,84,127,255);
+    position: relative;
+    background-color: rgba(233,84,127,255);
+    padding: 20px;
+    top: -50px;
+    left: 20px;
+   
+     
+}
+
+.textbox4{
+    background-color: lightgrey;
+      
+    width: 100%;
+    border: 15px solid green;
+    padding: 100px;
+    margin: 20px;
+  
+    
+}
+
+.ninja{
+    width: 50%;
+    max-height: 50vh;
+}
+
+.ninja_middle{
+    z-index: 0;
+  
+    width: 100%;
+    height: 100%;
+    max-width: 500px;
+    max-height: 500px;
+    margin-left: 340px;
+    
+}
+
+.tinder_pic{
+
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: top;
+    right: 0px;
+    
+    
+    z-index: 0;
+}
+
+.product_container{
+    display: flex;
+    flex-direction: row;
+    max-width: 10000px;
+    max-height: 10000px;
+   
+}
+
+.payment{
+    margin: 30px;
+}
+
+.mailbox{
+    display: flex;
+    flex-direction: column;
+}
+
+.pic_mail{
+    width: 20%;
+    height: 20%;
+    margin-left: 40%;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.button_pay{
+    max-width: 400px;
+    max-height: 400px;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    margin-left: 37%;
+    margin-bottom: 60px;
+}
+
+.button_buy{
+    background-color: rgba(233,84,127,255);
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+}
